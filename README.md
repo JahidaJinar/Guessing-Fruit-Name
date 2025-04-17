@@ -1,6 +1,6 @@
 # Guessing-Fruit-Name🍎🥭
 ---
-
+[Play Now] https://jahidajinar.github.io/Guessing-Fruit-Name/
 ### **Project Summary: "Guess the Fruit" Game**  
 **A simple web game where players guess fruits using hints.**  
 Perfect for learning HTML, CSS, and JavaScript basics! 🌟  
