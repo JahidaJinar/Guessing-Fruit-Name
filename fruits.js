@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById("quitBtn").addEventListener("click", () => {
     if (confirm('Are you sure you want to quit?')) {
       localStorage.removeItem('playerInfo');
-      window.location.href = './home.html';
+      window.location.href = './index.html';
     }
   });
 });
