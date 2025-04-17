@@ -1,0 +1,90 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body, html { height: 100%; font-family: 'Arial Rounded MT Bold', sans-serif; }
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffe39c, #ffcad4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: inline-grid;
+  grid-gap: 1rem;
+}
+
+input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #4caf50;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  transform: scale(1.05);
+  background-color: #43a047;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating fruits */
+.floating-fruits .fruit {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 6s infinite ease-in-out;
+}
+.floating-fruits .fruit:nth-child(1) { top: 80%; left: 20%; animation-delay: 0s; }
+.floating-fruits .fruit:nth-child(2) { top: 90%; left: 50%; animation-delay: 2s; }
+.floating-fruits .fruit:nth-child(3) { top: 85%; left: 80%; animation-delay: 4s; }
+.floating-fruits .fruit:nth-child(4) { bottom: 80%; left: 20%; animation-delay: 0s; }
+.floating-fruits .fruit:nth-child(5) { bottom: 90%; left: 50%; animation-delay: 2s; }
+.floating-fruits .fruit:nth-child(6) { bottom: 85%; left: 80%; animation-delay: 4s; }
+.floating-fruits .fruit:nth-child(7) { bottom: 50%; left: 10%; animation-delay: 2s; }
+.floating-fruits .fruit:nth-child(8) { bottom: 50%; left: 90%; animation-delay: 4s; }
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
